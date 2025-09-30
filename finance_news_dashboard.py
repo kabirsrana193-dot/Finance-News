@@ -90,5 +90,8 @@ server = app.server  # 🔑 required for Render
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 8050))
-    app.run_server(debug=False, host="0.0.0.0", port=port)
+
+    # Render provides the port via the PORT environment variable
+    port = int(os.environ.get("PORT", 8050))  # default 8050 if running locally
+    app.run_server(host="0.0.0.0", port=port)
+

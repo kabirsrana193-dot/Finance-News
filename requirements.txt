@@ -1,0 +1,8 @@
+dash==2.20.0
+dash-bootstrap-components==1.4.2
+pandas==2.1.1
+requests==2.31.0
+transformers==4.41.0
+torch==2.1.0
+gnews==0.1.0
+

@@ -1,1 +1,1 @@
-web: python finance_dashboard.py
+web: python finance_news_dashboard.py

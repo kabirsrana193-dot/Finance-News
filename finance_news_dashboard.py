@@ -88,10 +88,10 @@ def update_news(n_clicks):
 
 server = app.server  # 🔑 required for Render
 
-if __name__ == "__main__":
-    import os
+import os
 
-    # Render provides the port via the PORT environment variable
-    port = int(os.environ.get("PORT", 8050))  # default 8050 if running locally
-    app.run_server(host="0.0.0.0", port=port)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8050))  # Use Render's PORT or fallback to 8050
+    app.run(debug=False, host="0.0.0.0", port=port)
+
 

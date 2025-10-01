@@ -9,6 +9,7 @@ Original file is located at
 
 # finance_news_dashboard.py
 
+import os
 import feedparser
 from transformers import pipeline
 import dash
@@ -17,7 +18,10 @@ import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 import pandas as pd
 import plotly.express as px
-import os
+
+# Create the Dash app
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.COSMO])
+server = app.server
 
 # --------------------------
 # Config
